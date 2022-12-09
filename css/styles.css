@@ -16,7 +16,7 @@ body{
 /*logo*/
 
 .logo_img{
-background-image: url(../images/logo.jpg);
+
     width: 90px;
     border-radius: 50%;
 }
