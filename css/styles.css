@@ -42,6 +42,7 @@ body{
 }
 .menu_bar ul li{
     padding: 10px 6px;
+    margin-right: 3px;
     position: relative;
     
 }
