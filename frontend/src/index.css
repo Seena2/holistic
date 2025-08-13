@@ -177,6 +177,7 @@ body {
 .card_img {
   width: 15rem;
   height: 10rem;
+  margin: 0 auto;
   padding: auto;
   border: 1px solid #024906;
   border-radius: 10px;
