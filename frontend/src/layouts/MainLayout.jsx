@@ -8,6 +8,7 @@ function MainLayout() {
       <Navbar />
       <main className="main-content">
         <Outlet />
+        {/* <aside>Sidebar</aside> */}
       </main>
       <Footer />
     </div>

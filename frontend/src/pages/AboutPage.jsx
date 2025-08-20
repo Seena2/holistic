@@ -1,5 +1,5 @@
 import React from "react";
-import fisaha from "../assets/images/fish.jpg";
+import fisaha from "/images/Fisaha.jpg";
 
 function AboutPage() {
   return (

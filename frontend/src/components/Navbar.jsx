@@ -34,7 +34,7 @@ function Navbar() {
           <X onClick={handleToggleMenu} size={32} className="mobileMenuIcons" />
         </div>
 
-        <NavLink to="/" className="mobileLink">
+        <NavLink to="/" className="mobileLink" onClick={handleMobileLinkClick}>
           {/* Home  */}
           <FaHome />
         </NavLink>
@@ -80,13 +80,13 @@ function Navbar() {
           <NavLink to="/">
             <img className="logo_img" src={logo} alt="logo" />
           </NavLink>
-          <div className="logo_text hideOnMobile ">
+          <div className="logo_text  ">
             <span className="holistic">Holistic</span>
             <span className="consult">Consult and Agribusiness</span>
           </div>
         </div>
 
-        <div className="nav_links hideOnMobile">
+        <div className="nav_links ">
           <ul>
             <li>
               <NavLink to="/" className="dropdown ">

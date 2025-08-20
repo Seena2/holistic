@@ -7,11 +7,16 @@
   --color-black: #141628;
   --color-black-1: #212b38;
   --color-lightGray: #f0f0f0;
+  --color-lightGray-1: #dbdada;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  /* override default browser font-size: 62.5% X 16px =10px */
+  font-size: 62.5%; /* 1rem = 10px */
 }
 /* body {
   font-family: "Montserrat", "Lato", Verdana, Geneva, Tahoma, sans-serif;
@@ -37,6 +42,7 @@ footer {
 } */
 body {
   font-family: "Montserrat", "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
   color: var(--color-black);
   background-color: var(--color-lightGray);
   display: grid;
@@ -47,7 +53,7 @@ body {
 nav {
   grid-area: navbar;
   background-color: var(--color-white);
-  height: 80px;
+  height: 8rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -73,15 +79,15 @@ nav {
   align-items: center;
 }
 .logo_img {
-  width: 70px;
+  width: 7rem;
   border-radius: 50%;
   flex-shrink: 0;
 }
 .logo_text {
   color: var(--color-black);
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  display: flex;
+  font-size: 1.2rem;
+  display: none;
   flex-direction: column;
   text-wrap: wrap;
   text-align: center;
@@ -97,7 +103,7 @@ nav {
 
 .nav_links {
   color: var(--color-black);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
 }
@@ -110,7 +116,7 @@ nav {
   align-items: center;
 }
 .nav_links ul li {
-  height: 50px;
+  height: 3rem;
   position: relative;
   /* padding: 5px 8px; */
   margin-right: 1rem;
@@ -118,7 +124,7 @@ nav {
 .nav_links ul li a {
   height: 100%;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   transition: all 0.3s;
   font-weight: 500;
   padding: 0 0.3rem;
@@ -131,7 +137,6 @@ nav {
 }
 .nav_links ul li a:hover {
   color: var(--color-primary);
-  /* background-color: var(--color-primary); */
   /* padding: 5px; */
 }
 /*submenues*/
@@ -148,20 +153,28 @@ nav {
 }
 .dropdown_menu ul {
   display: block;
-  margin: 5px;
+  margin: 0.5rem;
 }
 .dropdown_menu ul li {
-  width: 160px;
-  padding: 5 px;
+  width: 10rem;
+  padding: 0 0.5rem;
+}
+.dropdown_menu ul li a {
+  font-size: 1.2rem;
+}
+
+.dropdown_menu ul li a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-lightGray);
 }
 /*mobile menu*/
 .mobileNav {
   position: fixed;
   top: 0;
   right: 0;
-  padding-top: 4rem;
+  padding-top: 8rem;
   height: 100vh;
-  width: 250px;
+  width: 30rem; /*25rem*/
   z-index: 999;
   backdrop-filter: blur(10px); /* blur the background  */
   background-color: rgb(
@@ -182,13 +195,14 @@ nav {
 
 .mobileLink {
   width: 100%;
-  height: 50px;
+  height: 5rem;
   font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  transition: background-color 0.3s ease;
 }
 .mobileLink:hover {
-  background-color: var(--color-lightGray);
+  background-color: var(--color-lightGray-1);
   color: var(--color-primary);
 }
 
@@ -202,13 +216,13 @@ nav {
   color: var(--color-primary);
 }
 .menu-icon {
-  display: none;
+  display: block;
 }
 
 .closeMenu {
   position: absolute;
-  top: 1.5rem;
-  right: 1.2rem;
+  top: 2.2rem;
+  right: 1rem;
   font-weight: bolder;
 }
 
@@ -219,37 +233,125 @@ nav {
 /*Main content*/
 .main-content {
   min-height: 100vh;
+  max-width: 1200px;
   width: 80%;
+  margin: 0 auto;
 }
-/*Card*/
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.section_heading {
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+/*Home Page*/
+/*Hero */
+
+/*About Section*/
+section {
+}
+.about_section .section_content {
+  padding: 2rem;
+  background-color: var(--color-lightGray);
+  background-color: #212b38;
+  border-radius: 10px;
+  color: #fff;
+}
+/*Cards*/
+.cards {
+  /* background-color: var(--color-lightGray); */
+  color: var(--color-black-1);
+  margin: 4rem auto;
+  padding: 1rem;
+  display: grid;
+  justify-content: space-evenly;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  gap: 1.2rem;
+}
 .card {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+.card_icon {
+  font-size: 4rem;
+  color: var(--color-primary);
+  margin: 2rem auto;
+  margin-bottom: 0;
+}
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 /*Footer*/
-
-/*Media Queries*/
-@media (max-width: 950px) {
-  body {
-    grid-template-rows: auto 1fr auto;
+footer {
+  background-color: var(--color-black-1);
+  margin: 2rem auto;
+  display: flex;
+}
+/*Media Queries : mobile first approach*/
+/*Styles for screens 768px and wider (e.g., tablets) */
+/* 768px/16px==48rem */
+@media (min-width: 48rem) {
+  html {
+    font-size: 75%; /* 75% x 16px = 12px increase the base font size by 75%  or 12px/16px=75%*/
   }
-  .logo_text {
-    display: none;
-    transition: all 0.3s ease-in-out;
+  body {
+    /* font-size: 1.4rem; */
   }
 }
-@media (max-width: 768px) {
+/* 864px/16px==54rem*/
+@media (min-width: 54rem) {
   body {
-    grid-template-rows: auto 1fr auto;
+    /* font-size: 1.8rem; */
   }
-  .hideOnMobile {
-    display: none;
+  .nav_links {
+    display: flex;
   }
   .menu-icon {
-    display: block;
+    display: none;
   }
 }
-@media (max-width: 400px) {
-  .mobileNav {
-    width: 100%;
+/*Styles for screens 1024px and wider (e.g., small laptops, desktops) */
+/* 1024/16==64rem */
+@media (min-width: 64rem) {
+  html {
+    font-size: 87.5%; /* 87.5% x 16px = 14px increase the base font size by 87.5% */
+  }
+  body {
+    /* font-size: 1.3rem; */
+  }
+  .logo_text {
+    display: flex;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*   Styles for screens 1200px and wider (e.g., large desktops) */
+/* 1200/16==75*/
+@media (min-width: 75rem) {
+  html {
+    font-size: 100%; /* 100% x 16px = 16px increase the base font size by 100% */
+  }
+  body {
+    /* font-size: 1.4rem; */
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
