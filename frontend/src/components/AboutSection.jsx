@@ -60,7 +60,7 @@ function AboutSection() {
               agri-inputs and agribusiness products."
             </p>
           </div>
-          <div className="card">
+          <div className="card core_values">
             <FaArrowAltCircleDown className="card_icon" />
             <h3> Core Values </h3>
             <div>
@@ -73,11 +73,12 @@ function AboutSection() {
             </div>
           </div>
         </div>
+        <div className="btn">
+          <Link to="/about" className="btnLarge">
+            Learn More
+          </Link>
+        </div>
       </div>
-
-      <Link to="/about">
-        <button>Learn More</button>
-      </Link>
     </section>
   );
 }

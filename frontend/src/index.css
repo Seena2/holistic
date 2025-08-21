@@ -49,11 +49,11 @@ body {
   grid-template-columns: 1fr;
   min-height: 100vh;
 }
-/*NAVBAR*/
+/*==== NAVBAR =====*/
 nav {
   grid-area: navbar;
   background-color: var(--color-white);
-  height: 8rem;
+  height: 5rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -64,6 +64,7 @@ nav {
   position: sticky;
   top: 0;
 }
+/*Desktop Navbar*/
 .desktopNavbar {
   display: flex;
   align-items: center;
@@ -79,7 +80,7 @@ nav {
   align-items: center;
 }
 .logo_img {
-  width: 7rem;
+  width: 5rem;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -124,7 +125,7 @@ nav {
 .nav_links ul li a {
   height: 100%;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: all 0.3s;
   font-weight: 500;
   padding: 0 0.3rem;
@@ -230,7 +231,7 @@ nav {
   display: flex;
 }
 
-/*Main content*/
+/*=== MAIN CONTENT ===*/
 .main-content {
   min-height: 100vh;
   max-width: 1200px;
@@ -243,35 +244,60 @@ p {
 }
 .section_heading {
   text-align: center;
-  margin: 1rem 0 2rem;
+  margin: 4rem 0 1rem;
+  padding-top: 4rem;
   font-size: 2rem;
   font-weight: 500;
 }
-/*Home Page*/
+/*=== HOME PAGE===*/
 /*Hero */
-
-/*About Section*/
-section {
+.hero {
+  padding-top: 200px;
+  width: 100%;
+  height: 30rem;
+  background-image: url(/images/hero1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+.heroText {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  justify-items: end;
+  align-items: end;
+
+  bottom: 0;
+}
+.hero h1 {
+  /* background-color: rgba(0, 250, 250, 0.1); */
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 25rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 7rem;
+  border-radius: 40px 0;
+}
+/*About Section*/
 .about_section .section_content {
   padding: 2rem;
-  background-color: var(--color-lightGray);
-  background-color: #212b38;
+  background-color: var(--color-white);
   border-radius: 10px;
-  color: #fff;
+  color: var(--color-black);
 }
 /*Cards*/
 .cards {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
   /* background-color: var(--color-lightGray); */
   color: var(--color-black-1);
   margin: 4rem auto;
   padding: 1rem;
   display: grid;
   justify-content: space-evenly;
-
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   gap: 1.2rem;
 }
 .card {
@@ -280,7 +306,7 @@ section {
   justify-items: center;
   padding: 1rem;
   border: 1px solid darkgray;
-  border-radius: 8px;
+  border-radius: 6rem 0;
   background-color: var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -294,6 +320,35 @@ section {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+.core_values ul {
+  list-style-type: var(--color-primary);
+  /* list-style-image: url(/images/hand.png); */
+  margin: 1rem;
+  padding-left: 2rem;
+  text-align: start;
+}
+.core_values li::marker {
+  color: var(--color-primary); /* Changes the color of the bullet/number */
+  font-size: 2rem; /* Increases the size of the bullet/number */
+}
+.btn {
+  justify-items: center;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 0.3rem 0;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 50%;
+}
+.btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn .btnLarge {
+  width: 50%;
 }
 /*Footer*/
 footer {

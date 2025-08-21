@@ -17,13 +17,13 @@ function ServiceSection() {
     },
     {
       title: "Training",
-      description: "Capacity building trainings",
+      description: "Carefully curated capacity building trainings",
       image: <FaTable className="card_icon" />,
     },
   ];
   return (
-    <div>
-      <h3 className="heading_title">Our Services</h3>
+    <section className="service_section">
+      <h3 className="section_heading">Our Services</h3>
       <div className="cards">
         <Card
           title={cardData[0].title}
@@ -41,7 +41,7 @@ function ServiceSection() {
           image={cardData[2].image}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

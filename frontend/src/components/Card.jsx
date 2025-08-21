@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function Card({ title, description, image }) {
   // console.log(title, description.image);
@@ -8,7 +8,9 @@ function Card({ title, description, image }) {
       {/* <img className="card_img" src={image} alt="" /> */}
       <div className="card_img">{image}</div>
       <p>{description}</p>
-      <button type="button">Learn more..</button>
+      <div className="btn">
+        <Link to="/services">Learn More</Link>
+      </div>
     </section>
   );
 }
