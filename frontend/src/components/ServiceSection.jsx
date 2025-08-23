@@ -1,29 +1,31 @@
 import { FaHandshake, FaInfoCircle, FaTable } from "react-icons/fa";
-import Card from "./Card";
+import consultancy from "/images/consulting1.jpg";
+import products from "/images/product3.jpg";
+import training from "/images/training.jpg";
+import Card from "./CardImage";
+const cardData = [
+  {
+    title: "Consultancy",
+    description: "Professional consultancy services on projects and programs.",
+    // image: <FaHandshake/>, //if you want to use image, import it to the file and palce the import name in {}
+    image: consultancy,
+  },
+  {
+    title: "Training",
+    description: "Carefully curated capacity building trainings",
+    image: training,
+  },
+  {
+    title: "Products",
+    description: " Supply of agri-inputs, tools and agribusiness products.",
+    image: products,
+  },
+];
 
 function ServiceSection() {
-  const cardData = [
-    {
-      title: "Consultancy",
-      description:
-        "Professional consultancy services on projects and programs.",
-      // image: <FaHandshake/>, //if you want to use image, import it to the file and palce the import name in {}
-      image: <FaHandshake className="card_icon" />,
-    },
-    {
-      title: "Products",
-      description: "Supply of agri-inputs and agribusiness products.",
-      image: <FaInfoCircle className="card_icon" />,
-    },
-    {
-      title: "Training",
-      description: "Carefully curated capacity building trainings",
-      image: <FaTable className="card_icon" />,
-    },
-  ];
   return (
     <section className="service_section">
-      <h3 className="section_heading">Our Services</h3>
+      <h3 className="section_heading">Services and Products</h3>
       <div className="cards">
         <Card
           title={cardData[0].title}

@@ -12,8 +12,7 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ProductsPage from "./pages/ProductsPage";
 import ContactPage from "./pages/ContactPage";
-import Consulancy from "./pages/Consulancy";
-import Trainings from "./pages/Trainings";
+import Library from "./pages/Library";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,9 +21,10 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/services/consultancy" element={<Consulancy />} />
-        <Route path="/services/trainings" element={<Trainings />} />
+        {/* <Route path="/services/consultancy" element={<Consulancy />} />
+        <Route path="/services/trainings" element={<Trainings />} /> */}
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/library" element={<Library />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

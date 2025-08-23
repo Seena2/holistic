@@ -281,7 +281,8 @@ p {
   border-radius: 40px 0;
 }
 /*About Section*/
-.about_section .section_content {
+section .section_content,
+.page .section_content {
   padding: 2rem;
   background-color: var(--color-white);
   border-radius: 10px;
@@ -316,19 +317,26 @@ p {
   margin: 2rem auto;
   margin-bottom: 0;
 }
+.card_image {
+  width: 100%;
+  height: 15rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
 .card h3 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.core_values ul {
+
+.bulletPoints {
   list-style-type: var(--color-primary);
   /* list-style-image: url(/images/hand.png); */
   margin: 1rem;
   padding-left: 2rem;
   text-align: start;
 }
-.core_values li::marker {
+.bulletPoints li::marker {
   color: var(--color-primary); /* Changes the color of the bullet/number */
   font-size: 2rem; /* Increases the size of the bullet/number */
 }
@@ -350,13 +358,255 @@ p {
 .btn .btnLarge {
   width: 50%;
 }
-/*Footer*/
-footer {
-  background-color: var(--color-black-1);
-  margin: 2rem auto;
+.cards .btn {
+  font-size: 1rem;
+  padding: 0.1rem;
+}
+/* consultancy_section */
+.consultancy_section .cards {
+  margin-top: 0;
+}
+/* training_section */
+.trainingsCard {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 2rem;
+  text-align: justify;
+  justify-items: center;
+  align-items: center;
+}
+.trainingsCard img {
+  margin: 0 auto;
+  width: 100%;
+  height: 30vh;
+  padding-right: 1rem;
+  border-radius: 0 1rem;
+}
+/*====ABOUT PAGE===*/
+.message {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.profile {
+  width: 100%;
+  text-align: center;
+}
+.profile img {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 15rem;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.name_caption {
+  justify-items: center;
+  text-align: center;
+  margin: 2rem;
+}
+.name_caption p {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  color: var(--color-primary);
+}
+.subtitle {
+  font-size: 1.4rem;
+  margin: 5rem 0 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+table {
+  margin: 0 auto;
+}
+table,
+th,
+td {
+  padding: 0.3rem;
+  border: 2px solid #141628;
+}
+/*===SERVICES====*/
+.consultancyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.image_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.caption {
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 0;
+}
+.caption h4 {
+  color: var(--color-primary);
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+.justifyList {
+  text-align: justify;
+}
+.trainingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+/*===CONTACT PAGE===*/
+.address {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+.address_title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem auto;
+  color: #9e9fa0;
+}
+.icon_group {
+  /* display: flex; */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.icon_group .label {
+  display: flex;
+  gap: 0.5rem;
+}
+.icon_group .label span {
+  color: #9e9fa0;
+  font-weight: 600;
+}
+.contact_icon {
+  justify-content: center;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  color: var(--color-primary);
+}
+.icon_group .contact {
+  margin-left: 2rem;
+}
+.icon_group a {
+  color: #0852b3;
+  margin-bottom: 0.5rem;
+}
+.icon_group a:hover {
+  color: var(--color-primary);
+}
+.socialLinks {
+  color: var(--color-black-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
+.socialLinks a:hover {
+  color: var(--color-primary);
+}
+.googleMap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.googleMap img {
+  width: 100%;
+}
+/*contact form*/
+.contactForm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.formGroup label {
+  color: var(--color-black-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+}
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-black-1);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.btnWithIcon {
   display: flex;
 }
-/*Media Queries : mobile first approach*/
+/*===FOOTER===*/
+footer {
+  margin: 2rem auto;
+  margin-bottom: 0;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.footerDiv {
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-black-1);
+  color: var(--color-white);
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  font-size: 1rem;
+}
+.footer_card {
+  text-align: start;
+}
+.footer_card h3 {
+  color: #b9babb;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.footer_card p {
+  padding-left: 2rem;
+}
+
+.footer_icons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.footer_icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.social_links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  gap: 2rem;
+  cursor: pointer;
+}
+.social_links a:hover {
+  color: var(--color-primary);
+}
+.copyright {
+  color: var(--color-black);
+  text-align: end;
+}
+/*===MEDIA QUERIES : mobile first approach*/
 /*Styles for screens 768px and wider (e.g., tablets) */
 /* 768px/16px==48rem */
 @media (min-width: 48rem) {
@@ -365,6 +615,10 @@ footer {
   }
   body {
     /* font-size: 1.4rem; */
+  }
+
+  .footerDiv {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* 864px/16px==54rem*/
@@ -378,6 +632,22 @@ footer {
   .menu-icon {
     display: none;
   }
+  .trainingsCard {
+    grid-template-columns: 1fr 1fr;
+  }
+  .message,
+  .consultancyGrid {
+    grid-template-columns: 1fr 2fr;
+  }
+  .trainingGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+  .address {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footerDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*Styles for screens 1024px and wider (e.g., small laptops, desktops) */
 /* 1024/16==64rem */
@@ -390,6 +660,10 @@ footer {
   }
   .logo_text {
     display: flex;
+  }
+  .card_image {
+    width: 100%;
+    height: 10rem;
   }
 
   .cards {

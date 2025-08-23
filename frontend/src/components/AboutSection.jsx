@@ -34,6 +34,15 @@ function AboutSection() {
             core, we are building resilient food systems that can withstand
             challenges, adapt to change, and nourish generations to come.
           </p>
+          <p>
+            Holistic Consult and Agribusiness with at least three main service
+            areas:
+          </p>
+          <ul className="bulletPoints">
+            <li>Professional consultancy services on projects and programs</li>
+            <li>Supply of agri-inputs and agribusiness products</li>
+            <li>Capacity building trainings</li>
+          </ul>
         </div>
         <div className="cards">
           <div className="card">
@@ -60,11 +69,11 @@ function AboutSection() {
               agri-inputs and agribusiness products."
             </p>
           </div>
-          <div className="card core_values">
+          <div className="card ">
             <FaArrowAltCircleDown className="card_icon" />
             <h3> Core Values </h3>
             <div>
-              <ul>
+              <ul className="bulletPoints">
                 <li>Integrity</li>
                 <li>Innovation</li>
                 <li>Sustainability</li>

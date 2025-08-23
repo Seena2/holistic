@@ -102,10 +102,12 @@ function Navbar() {
               <div className="dropdown_menu">
                 <ul>
                   <li>
-                    <NavLink to="/reference">Client Reference</NavLink>
+                    <NavLink to="/about#clientReference">
+                      Client Reference
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/stories">Case Stories</NavLink>
+                    <NavLink to="/about#caseStories">Case Stories</NavLink>
                   </li>
                 </ul>
               </div>
@@ -117,11 +119,12 @@ function Navbar() {
               <div className="dropdown_menu">
                 <ul>
                   <li>
-                    <NavLink to="/services/consultancy">Consultancy</NavLink>
+                    <NavLink to="/services#consultancy">Consultancy</NavLink>
                   </li>
 
                   <li>
-                    <NavLink to="/services/trainings">Trainings</NavLink>
+                    {/* <NavLink to="/services/trainings">Trainings</NavLink> */}
+                    <NavLink to="/services#training">Trainings</NavLink>
                   </li>
                 </ul>
               </div>
@@ -133,19 +136,20 @@ function Navbar() {
               <div className="dropdown_menu">
                 <ul>
                   <li>
-                    <NavLink to="/dairy">Dairy</NavLink>
+                    {/* <NavLink to="/dairy">Seeds</NavLink> */}
+                    <NavLink to="/products#seeds">Seeds</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/poultry">Poultry</NavLink>
+                    <NavLink to="/products#drugs">Drugs</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/meat">Meat</NavLink>
+                    <NavLink to="/products#animalFeed">Animal Feed</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/sheepGoat">Sheep & Goat</NavLink>
+                    <NavLink to="/products#vetSupplies">Vet Supplies</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/cattles">Cattles</NavLink>
+                    <NavLink to="/products#tools">Kits & Tools</NavLink>
                   </li>
                 </ul>
               </div>
@@ -157,10 +161,11 @@ function Navbar() {
               <div className="dropdown_menu">
                 <ul>
                   <li>
-                    <NavLink to="/gallery">Galary</NavLink>
+                    {/* <NavLink to="/gallery">Galary</NavLink> */}
+                    <NavLink to="/library#galary">Galary</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/books">Books</NavLink>
+                    <NavLink to="/library#books">Books</NavLink>
                   </li>
                 </ul>
               </div>
